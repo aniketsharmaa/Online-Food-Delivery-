@@ -1,103 +1,65 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// start from 30 make body comp 
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://img.freepik.com/free-vector/hand-drawn-pizza-delivery-man-with-scooter_23-2147674445.jpg?w=740&t=st=1711838469~exp=1711839069~hmac=af757b5f613a8359343c5391dedb1c601c39cece510dcaaf1f201bc4dc9f97ae" />
+      </div>
 
-
-
-
-const NavbarContent = () => {
-    return (
-        <ul className="navbar-content">
-            <li className="list-item">Search</li>
-            <li className="list-item">Offers</li>
-            <li className="list-item">Login</li>
-            <li className="list-item">Cart</li>
-
+      <div className="nav-items">
+        <ul className="items">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Login</li>
+          <li>Cart</li>
         </ul>
-    );
-}
-const Navbar = () => {
-    return (
-        <div className="navbar">
 
-            <img src="https://img.freepik.com/free-vector/delivery-service-illustrated_23-2148505081.jpg?w=740&t=st=1711475937~exp=1711476537~hmac=50c535ca77fd389904f7bd60dd04a1abf183971648512c52bc7553c31db59065" className="img-logo" />
-
-
-            <NavbarContent />
-            
-            
-        </div>
-    );
-
-}
-const Line = () =>{
-    return(
-        <hr/>
-    );
+      </div>
+    </div>
+  );
 }
 const SearchBar = () => {
-    return (
-        <div className="SearchBar">
-            <label>
-                
-                <input placeholder="Enter food or resturant" type="text" id="fname" name="fname"/>
+  return (
+    <div className="search-bar">
+      <input placeholder="Enter Food or Resturent" />
+      <button>Search</button>
 
-            </label>
-            <button>SEARCH</button>
-        </div>
-
-    );
+    </div>
+  );
 }
-const Card = (props) =>{
-    // const {name} = props
-    return(
-        <div className="card" >
-            <img className="card-img" src="https://img.freepik.com/free-photo/spaghetti-with-shrimp_1339-1352.jpg?t=st=1711572138~exp=1711575738~hmac=159dce724688b3ce01e14bacdb948ef0adf3f72e3917b3d203621ce1c4e953ab&w=996"/>
-            <br/>
-            <br/>
-            <hr/>
-            <br/>   
-            <h4>{props.name}</h4>
-            <h5>{props.cusins}</h5>
-            <h5>{props.rating}</h5>
-            <h5>{props.dot}</h5>
-        </div>
-    );
+const ResturantCard = () => {
+  return (
+    <div className="res-card">
+      <h3>Meghna Food</h3>
+
+    </div>
+  );
 }
-const CardContainer = () =>{
-    return(
-        <div className="card-container">
-            <Card name="Burger King" rating="4.3"cusins="Western" dot="20 minutes"/>
-            <Card name="KFC" rating="4.3"cusins="Western"dot="39 minutes"/>
-            <Card name="Domios" rating="4.2"cusins="Chinese"dot="40 minutes"/>
-            <Card name="Murgan Dosa" rating="4.3"cusins="South India"dot="3 minutes"/>
-            <Card name="Rameshwaram Cafe" rating="3.4"cusins="Southern India"dot="4 minutes"/>
-            <Card name="Kathi Rolls" rating="3.4"cusins="Southern India"dot="4 minutes"/>
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="Search">Search</div>
+      <SearchBar />
+      <div className="res-container">
+        // resturant card
+        <ResturantCard />
 
-        </div>
-    );
+      </div>
+    </div>
+  )
 }
-const App = () => {
-    return (
-        <div>
+const Applayout = () => {
+  return (
+    <div className="app">
 
-            {/* Navbar  */}
-            <Navbar />
+      <Header />
 
-            {/* line  */}
-            {/* <Line/> */}
-            {/* Search  */}
-            <SearchBar />
-
-            {/* Dishes-container */}
-            <CardContainer/>
-            {/* card-container */}
-
-            {/* footer */}
-
-        </div>
-
-    );
+    </div>
+  );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Applayout />)
