@@ -28844,7 +28844,7 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 // data from swiggy api 
-var restaurantList = [{
+var resList = [{
   type: "restaurant",
   data: {
     type: "F",
@@ -30495,117 +30495,127 @@ var restaurantList = [{
   },
   subtype: "basic"
 }];
-var resObj = {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "74453",
-    name: "Domino's Pizza",
-    uuid: "87727dbd-7f2b-4857-9763-359624165845",
-    city: "21",
-    area: "Athwa",
-    totalRatingsString: "1000+ ratings",
-    cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-    cuisines: ["Pizzas", "Fries", "Garlic Bread"],
-    tags: [],
-    costForTwo: 40000,
-    costForTwoString: "₹400 FOR TWO",
-    deliveryTime: 45,
-    minDeliveryTime: 45,
-    maxDeliveryTime: 45,
-    slaString: "45 MINS",
-    lastMileTravel: 0,
-    slugs: {
-      restaurant: "dominos-pizza-majura-nondh-test_surat",
-      city: "surat"
-    },
-    cityState: "21",
-    address: "Shop 32 To 35, Sheetal Shopping Square,Near Lb Turning Point, Bhatar Road,MAJURA NONDH, Surat,GUJARAT-395001",
-    locality: "Bhatar Road",
-    parentId: 2456,
-    unserviceable: false,
-    veg: true,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "FREE DELIVERY",
-      shortDescriptionList: [{
-        meta: "FREE DELIVERY",
-        discountType: "FREE_DELIVERY",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "FREE DELIVERY",
-        discountType: "FREE_DELIVERY",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "",
-      shortDescriptionList: [{
-        meta: "Free Delivery",
-        discountType: "FREE_DELIVERY",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "FREE DELIVERY",
-        discountType: "FREE_DELIVERY",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "2.1 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "74453",
-      deliveryTime: 45,
-      minDeliveryTime: 45,
-      maxDeliveryTime: 45,
-      lastMileTravel: 0,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: false,
-    avgRating: "4.0",
-    totalRatings: 1000,
-    new: false
-  },
-  subtype: "basic"
-};
+
+// const resObj =  {
+//   type: "restaurant",
+//   data: {
+//     type: "F",
+//     id: "74453",
+//     name: "Domino's Pizza",
+//     uuid: "87727dbd-7f2b-4857-9763-359624165845",
+//     city: "21",
+//     area: "Athwa",
+//     totalRatingsString: "1000+ ratings",
+//     cloudinaryImageId: "bz9zkh2aqywjhpankb07",
+//     cuisines: ["Pizzas","Fries","Garlic Bread"],
+//     tags: [],
+//     costForTwo: 40000,
+//     costForTwoString: "₹400 FOR TWO",
+//     deliveryTime: 45,
+//     minDeliveryTime: 45,
+//     maxDeliveryTime: 45,
+//     slaString: "45 MINS",
+//     lastMileTravel: 0,
+//     slugs: {
+//       restaurant: "dominos-pizza-majura-nondh-test_surat",
+//       city: "surat",
+//     },
+//     cityState: "21",
+//     address:
+//       "Shop 32 To 35, Sheetal Shopping Square,Near Lb Turning Point, Bhatar Road,MAJURA NONDH, Surat,GUJARAT-395001",
+//     locality: "Bhatar Road",
+//     parentId: 2456,
+//     unserviceable: false,
+//     veg: true,
+//     select: false,
+//     favorite: false,
+//     tradeCampaignHeaders: [],
+//     aggregatedDiscountInfo: {
+//       header: "FREE DELIVERY",
+//       shortDescriptionList: [
+//         {
+//           meta: "FREE DELIVERY",
+//           discountType: "FREE_DELIVERY",
+//           operationType: "RESTAURANT",
+//         },
+//       ],
+//       descriptionList: [
+//         {
+//           meta: "FREE DELIVERY",
+//           discountType: "FREE_DELIVERY",
+//           operationType: "RESTAURANT",
+//         },
+//       ],
+//       subHeader: "",
+//       headerType: 0,
+//       superFreedel: "",
+//     },
+//     aggregatedDiscountInfoV2: {
+//       header: "",
+//       shortDescriptionList: [
+//         {
+//           meta: "Free Delivery",
+//           discountType: "FREE_DELIVERY",
+//           operationType: "RESTAURANT",
+//         },
+//       ],
+//       descriptionList: [
+//         {
+//           meta: "FREE DELIVERY",
+//           discountType: "FREE_DELIVERY",
+//           operationType: "RESTAURANT",
+//         },
+//       ],
+//       subHeader: "",
+//       headerType: 0,
+//       superFreedel: "",
+//     },
+//     chain: [],
+//     feeDetails: {
+//       fees: [],
+//       totalFees: 0,
+//       message: "",
+//       title: "",
+//       amount: "",
+//       icon: "",
+//     },
+//     availability: {
+//       opened: true,
+//       nextOpenMessage: "",
+//       nextCloseMessage: "",
+//     },
+//     longDistanceEnabled: 0,
+//     rainMode: "NONE",
+//     thirdPartyAddress: false,
+//     thirdPartyVendor: "",
+//     adTrackingID: "",
+//     badges: {
+//       imageBased: [],
+//       textBased: [],
+//       textExtendedBadges: [],
+//     },
+//     lastMileTravelString: "2.1 kms",
+//     hasSurge: false,
+//     sla: {
+//       restaurantId: "74453",
+//       deliveryTime: 45,
+//       minDeliveryTime: 45,
+//       maxDeliveryTime: 45,
+//       lastMileTravel: 0,
+//       lastMileDistance: 0,
+//       serviceability: "SERVICEABLE",
+//       rainMode: "NONE",
+//       longDistance: "NOT_LONG_DISTANCE",
+//       preferentialService: false,
+//       iconType: "EMPTY",
+//     },
+//     promoted: false,
+//     avgRating: "4.0",
+//     totalRatings: 1000,
+//     new: false,
+//   },
+//   subtype: "basic",
+// }
 // start from 30 make body comp 
 var Header = function Header() {
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -30630,13 +30640,19 @@ var SearchBar = function SearchBar() {
 };
 var ResturantCard = function ResturantCard(props) {
   var resData = props.resData;
+  var _resData$data = resData === null || resData === void 0 ? void 0 : resData.data,
+    cloudinaryImageId = _resData$data.cloudinaryImageId,
+    name = _resData$data.name,
+    cuisines = _resData$data.cuisines,
+    avgRating = _resData$data.avgRating,
+    costForTwo = _resData$data.costForTwo;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "res-card"
   }, /*#__PURE__*/_react.default.createElement("img", {
     alt: "image load ni hua",
     className: "res-logo",
-    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resData.cloudinaryImageId
-  }), /*#__PURE__*/_react.default.createElement("h3", null, resData.name), /*#__PURE__*/_react.default.createElement("h6", null, resData.cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("h6", null, "Rating ", resData.avgRating), /*#__PURE__*/_react.default.createElement("h6", null, resData.costForTwo / 100));
+    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + resData.data.cloudinaryImageId
+  }), /*#__PURE__*/_react.default.createElement("h3", null, name), /*#__PURE__*/_react.default.createElement("h6", null, cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("h6", null, "Rating ", avgRating), /*#__PURE__*/_react.default.createElement("h6", null, costForTwo / 100));
 };
 var Body = function Body() {
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -30645,16 +30661,11 @@ var Body = function Body() {
     className: "Search"
   }), /*#__PURE__*/_react.default.createElement(SearchBar, null), /*#__PURE__*/_react.default.createElement("div", {
     className: "res-container"
-  }, /*#__PURE__*/_react.default.createElement(ResturantCard, {
-    resData: resObj.data
-  }), /*#__PURE__*/_react.default.createElement(ResturantCard, {
-    resData: resObj.data
-  }), /*#__PURE__*/_react.default.createElement(ResturantCard, {
-    resData: resObj.data
-  }), /*#__PURE__*/_react.default.createElement(ResturantCard, {
-    resData: resObj.data
-  }), /*#__PURE__*/_react.default.createElement(ResturantCard, {
-    resData: resObj.data
+  }, resList.map(function (restaurant) {
+    return /*#__PURE__*/_react.default.createElement(ResturantCard, {
+      key: restaurant.id,
+      resData: restaurant
+    });
   })));
 };
 var Applayout = function Applayout() {

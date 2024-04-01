@@ -55,13 +55,14 @@
 
 .res-container {
     display: flex;
+    flex-wrap:wrap;
 }
 
 .res-card {
     margin-top: 30px;
     margin: 10px;
     width: 140px;
-    height: 190px;
+    /* height: 190px; */
     border: 0.5px solid black;
     cursor: pointer;
 }
