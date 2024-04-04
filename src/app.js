@@ -4,6 +4,7 @@ import { Header } from "./components/Header"
 import SearchBar from "./components/SearchBar";
 import ResturantCard from "./components/ResturantCard";
 import { resList } from "./utils/mockData";
+import Body from "./components/Body";
 
 
 // data from swiggy api 
@@ -130,19 +131,6 @@ import { resList } from "./utils/mockData";
 //   subtype: "basic",
 // }
 // start from 30 make body comp 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="Search"></div>
-      <SearchBar />
-      <div className="res-container">
-        {
-          resList.map(restaurant => <ResturantCard key={restaurant.id} resData={restaurant} />)
-        }
-      </div>
-    </div>
-  )
-}
 
 
 

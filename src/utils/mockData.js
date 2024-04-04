@@ -1,5 +1,6 @@
+import React from "react";
 
-export const resList = [
+export let resList = [
     {
         type: "restaurant",
         data: {
