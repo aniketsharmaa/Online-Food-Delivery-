@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { resList } from "../utils/mockData";
 import { Res_card_img } from "../utils/constant";
+
+
 
 const ResturantCard = (props) => {
 
